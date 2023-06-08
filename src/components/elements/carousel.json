@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Carousel": {
+      "displayName": "carouselItem",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.carousel-item"
+    }
+  }
+}

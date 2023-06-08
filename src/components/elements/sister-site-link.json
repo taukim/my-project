@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_sister_site_links",
+  "info": {
+    "displayName": "SisterSiteLink",
+    "icon": "sitemap"
+  },
+  "options": {},
+  "attributes": {
+    "ToolTip": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

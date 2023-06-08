@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tag_subtypes",
+  "info": {
+    "singularName": "tag-subtype",
+    "pluralName": "tag-subtypes",
+    "displayName": "Tag_Subtype",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "tag_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-list.tag-list"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "NavVisible": {
+      "type": "boolean",
+      "default": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "primary_tag_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::primary-tag-list.primary-tag-list",
+      "inversedBy": "tag_subtypes"
+    }
+  }
+}

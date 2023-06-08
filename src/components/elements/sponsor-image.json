@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_elements_sponsor_images",
+  "info": {
+    "displayName": "sponsorImage",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "gold",
+        "silver",
+        "bornze"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

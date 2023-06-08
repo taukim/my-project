@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "therapeutics",
+  "info": {
+    "singularName": "therapeutic",
+    "pluralName": "therapeutics",
+    "displayName": "Tag_Therapeutic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tag_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-list.tag-list"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    }
+  }
+}

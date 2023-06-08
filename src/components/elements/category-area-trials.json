@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_category_area_trials",
+  "info": {
+    "displayName": "CategoryArea Trials",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trial.trial"
+    },
+    "class": {
+      "type": "string",
+      "default": "Trials",
+      "required": true
+    }
+  }
+}

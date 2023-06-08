@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "author_collections",
+  "info": {
+    "singularName": "author-collection",
+    "pluralName": "author-collections",
+    "displayName": "Author",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AuthorName": {
+      "type": "string"
+    },
+    "Bio": {
+      "type": "richtext"
+    },
+    "Photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

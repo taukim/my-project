@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trials",
+  "info": {
+    "singularName": "trial",
+    "pluralName": "trials",
+    "displayName": "tag_Trials",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "tag_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-list.tag-list"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    }
+  }
+}

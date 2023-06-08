@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "primary_tag_lists",
+  "info": {
+    "singularName": "primary-tag-list",
+    "pluralName": "primary-tag-lists",
+    "displayName": "PrimaryTagList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tagname": {
+      "type": "string"
+    },
+    "TagInfo": {
+      "type": "richtext"
+    },
+    "tag_subtypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-subtype.tag-subtype",
+      "mappedBy": "primary_tag_list"
+    }
+  }
+}

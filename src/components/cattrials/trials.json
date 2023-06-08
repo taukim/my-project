@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_cattrials_trials",
+  "info": {
+    "displayName": "trials",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "layout": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

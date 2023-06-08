@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_lists",
+  "info": {
+    "singularName": "article-list",
+    "pluralName": "article-lists",
+    "displayName": "ArticleList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ContentTitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sponsors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sponsor.sponsor"
+    },
+    "primary_tag_list": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::primary-tag-list.primary-tag-list"
+    },
+    "relatedContent": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article-list.article-list",
+      "inversedBy": "ReferencedBy"
+    },
+    "ReferencedBy": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article-list.article-list",
+      "inversedBy": "relatedContent"
+    },
+    "Authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author-collection.author-collection"
+    },
+    "Trials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trial.trial"
+    },
+    "Therapeutics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::therapeutic.therapeutic"
+    },
+    "synopsis": {
+      "type": "richtext"
+    },
+    "Subtypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-subtype.tag-subtype"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "ContentTitle"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "video",
+        "podcast"
+      ],
+      "default": "article",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "default": "Body content...",
+      "required": true
+    },
+    "LearningObjectives": {
+      "type": "richtext",
+      "default": "empty",
+      "required": false
+    },
+    "References": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    },
+    "Hero": {
+      "type": "boolean",
+      "default": false
+    },
+    "view": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

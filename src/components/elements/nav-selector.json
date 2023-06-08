@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_nav_selectors",
+  "info": {
+    "displayName": "navSelector",
+    "icon": "list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Route": {
+      "type": "string"
+    },
+    "tag_subtypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag-subtype.tag-subtype"
+    },
+    "tag_therapeutics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::therapeutic.therapeutic"
+    },
+    "tag_trials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trial.trial"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FeaturedArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article-list.article-list"
+    },
+    "carousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.carousel"
+    },
+    "CategoryBlock": {
+      "type": "dynamiczone",
+      "components": [
+        "elements.category-area",
+        "elements.category-area-trials"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_sponsors",
+  "info": {
+    "displayName": "sponsor",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "founder": {
+      "type": "boolean"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "gold",
+        "silver",
+        "bronze"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

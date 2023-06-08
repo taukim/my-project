@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tag_lists",
+  "info": {
+    "singularName": "tag-list",
+    "pluralName": "tag-lists",
+    "displayName": "tagList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

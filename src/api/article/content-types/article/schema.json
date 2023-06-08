@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article parent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Collectiontitles": {
+      "type": "string"
+    },
+    "CollectionContent": {
+      "type": "richtext"
+    },
+    "article_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article-list.article-list"
+    }
+  }
+}
